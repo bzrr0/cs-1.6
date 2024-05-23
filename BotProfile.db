@@ -1,0 +1,128 @@
+//----------------------------------------------------------------------------
+// BotProfile.db
+// Author: bzrr0
+//
+// This database defines bot "personalities". 
+// Feel free to edit it and define your own bots.
+//
+
+
+//----------------------------------------------------------------------------
+
+//
+// All profiles begin with this data and overwrite their own
+//
+Default
+	Skill = 100
+	Aggression = 100
+	ReactionTime = 0.3
+	AttackDelay = 0
+	Teamwork = 100
+	WeaponPreference = none
+	Cost = 0
+	Difficulty = NORMAL
+	VoicePitch = 100
+	Skin = 0
+End
+
+//----------------------------------------------------------------------------
+
+//
+// These templates inherit from Default and override with their values
+// The name of the template defines a type that is used by individual bot profiles
+//
+
+// weapon preference templates
+Template Allin
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = p90
+	WeaponPreference = tmp
+	WeaponPreference = mac10
+End
+
+Template Rifler
+	WeaponPreference = awp
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galil
+	WeaponPreference = famas
+End
+
+Template Sniper
+	WeaponPreference = awp
+	WeaponPreference = scout
+End
+
+// skill templates
+Template Entry
+	Skill = 100
+	Aggression = 100
+	ReactionTime = 0.10
+	AttackDelay = 0.10
+	Teamwork = 30
+	Cost = 4
+	Difficulty = EXPERT
+	VoicePitch = 60
+	Skin = 1
+End
+
+Template Lurker
+	Skill = 100
+	Aggression = 50
+	ReactionTime = 0.10
+	AttackDelay = 0.10
+	Teamwork = 67
+	Cost = 4
+	Difficulty = EXPERT
+	VoicePitch = 90
+	Skin = 3
+End
+
+Template Awper
+	Skill = 100
+	Aggression = 67
+	ReactionTime = 0.10
+	AttackDelay = 0.10
+	Teamwork = 100
+	Cost = 3
+	Difficulty = EXPERT
+	VoicePitch = 120
+	Skin = 4
+End
+
+//----------------------------------------------------------------------------
+//
+// These are the individual bot profiles, which inherit first from 
+// Default and then the specified Template(s), in order
+//
+
+Allin+Entry TACO
+End
+
+Allin+Entry fnx
+End
+
+Rifler+Lurker fer
+End
+
+Rifler+Lurker Coldzera
+End
+
+Sniper+Awper FalleN
+End
+
+Allin+Entry flamie
+End
+
+Allin+Entry Zeus
+End
+
+Rifler+Lurker Edward
+End
+
+Rifler+Lurker seized
+End
+
+Sniper+Awper s1mple
+End
